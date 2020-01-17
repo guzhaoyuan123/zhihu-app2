@@ -3,18 +3,18 @@
 		<div class="infoBox1">
 			<div class="info1" v-for="(item, index) in dataList" :key="index">
 				<div class="content1">
-					<img :src="item.banner" />
+					<img :src="item.banner" class="find_img" />
 					<div class="zishubox">
-						<h3 class="title">{{ item.title }}</h3>
-						<span class="time">{{ item.updated }}</span>
-						<h5 class="nierong">{{ item.introduction }}</h5>
+						<h3 class="find_title">{{ item.title }}</h3>
+						<span class="find_time">{{ item.updated }}</span>
+						<h5 class="find_nierong">{{ item.introduction }}</h5>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="more">
-			<h1><router-link  to="special/all">查看更多</router-link></h1>
+			<h1 class="find_h1"><router-link  to="special/all">查看更多</router-link></h1>
 		</div>
 		
 		<div class="yuanzoutaolun">
@@ -22,7 +22,7 @@
 		</div>
 		
 		<div class="more2">
-			<h1><router-link  to="roundtable">查看更多专题</router-link></h1>
+			<router-link  to="roundtable">查看更多专题</router-link>
 			</div>
 	</div>
 </template>
@@ -49,17 +49,27 @@ export default {
 
 <style>
 
+.find{
+}
 
 .infoBox1{
-	box-sizing: border-box;
+	margin: 0 auto;
+	width: 1360px;
 }
 
 .info1{
+	
 	display: inline-block;
-	margin: 50px;
+	margin-left: 55px;
+	margin-top: 20px;
 	width: 600px;
 	height: 400px;
-	border: 1px solid gray;
+	border-radius: 5px;
+	border: 1px solid gainsboro;
+}
+.find_img{
+	width: 600px;
+	height: 250px;
 }
 
 	
@@ -87,13 +97,13 @@ export default {
 	height: 50px;
 	background-color: #FFFFFF;
 }
-.time{
+.find_time{
 	margin-top: 10px;
 }
-.nierong{
+.find_nierong{
 	margin-top: 10px;
 }
-h1{
+.find_h1{
 	font-size: 18px;
 }
 

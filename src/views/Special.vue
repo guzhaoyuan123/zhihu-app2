@@ -4,12 +4,12 @@
             <div class="info" v-for="(item,index) in dataList" :key="index">
                 <div class="special_content">
 					<div class="special_box1">
-						 <img :src="item.banner"/>
+						 <img :src="item.banner" class="special_img"/>
 					</div>
 					<div class="special_box2">
-						<h3 class="title">{{item.title}}</h3>
-						<span class="time">{{item.updated}}</span>
-						<span class="nierong">
+						<h3 class="special_title">{{item.title}}</h3>
+						<span class="special_time">{{item.updated}}</span>
+						<span class="special_nierong">
 						    {{item.introduction }}
 						</span>
 					</div>
@@ -43,7 +43,7 @@
 
 
 <style>
-    img{
+    .special_img{
 		margin-top: 20px;
         width: 300px;
         height: 140px;
@@ -73,7 +73,7 @@
 		float: left;
 	}
 
-  .nierong{
+  .special_nierong{
 	  color: gray;
   }
    

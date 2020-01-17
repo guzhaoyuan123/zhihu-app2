@@ -69,6 +69,7 @@
 		width: 100%;
 		background-color: linear-gradient(#086DD3,#055DB6);
 		list-style: none;
+		margin-left: 100px;
 	}
 	
 	.nav-item{
