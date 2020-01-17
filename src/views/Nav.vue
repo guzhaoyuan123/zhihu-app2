@@ -2,6 +2,7 @@
 	<div>
 		<div class="nav gutter">
 			<div class="nav-bar">
+				<img id="logo" src="../../public/img/new_logo.ede2316d.png" />
 				<ul class="nav-list flex-left">
 					<li class="nav-item">
 						<router-link class="router" to="/home">首页</router-link>
@@ -48,8 +49,16 @@
 	}
 	
 	.nav-bar{
-		height: 80px;
-		background-color: cornflowerblue;
+		height: 60px;
+		background: linear-gradient(#086DD3,#055DB6);
+		position: relative;
+		#logo{
+			height: 25px;
+			width: 60px;
+			position: absolute;
+			left:30px;
+			top:18px;
+		}
 	}
 
 	.gutter {
@@ -57,9 +66,9 @@
 		margin-bottom: 10px;
 	}
 	.nav-list{
-		height: 80px;
+		height: 60px;
 		width: 100%;
-		background-color: cornflowerblue;
+		background-color: linear-gradient(#086DD3,#055DB6);
 		list-style: none;
 	}
 	
@@ -67,10 +76,10 @@
 		list-style: none;
 		float: left;
 		width: 150px;
-		background-color: cornflowerblue;
+		background-color: linear-gradient(#086DD3,#055DB6);
 		font-size: 20px;
 		text-align: center;
-		line-height: 80px;
+		line-height: 60px;
 		box-sizing: border-box;
 	}
 	
