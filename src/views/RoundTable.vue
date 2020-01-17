@@ -71,12 +71,13 @@ export default {
 }
 .round_name {
 	position: absolute;
-	top: 140px;
+	top: 170px;
 	left: 5px;
 	right: 5px;
-	font-size: 16px;
-	font-weight: 200;
+	font-size: 14px;
+	font-weight: 500;
 	color: white;
+	font-weight: 500;
 }
 
 span {
