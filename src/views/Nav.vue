@@ -21,7 +21,6 @@
 		
 		 <router-view class="container"/>
 	</div>
-	<!-- 二级路由入口 -->
 	
 </template>
 

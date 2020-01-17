@@ -12,7 +12,7 @@
 			</div>
 		</div>
 		<div class="round_cebian">
-			<img src="../assets/image/cebian.png" />
+			<img src="../assets/image/cebian.png" class="round_cebiantupian" />
 		</div>
 	</div>
 </template>
@@ -38,18 +38,21 @@ export default {
 </script>
 
 <style>
-
-.round_cebian{
-	margin-top: 20px;
-	border-radius: 5px;
+.round_cebiantupian{
 	width: 280px;
-	background-color: #000000;
+	height: 620px;
+}
+.round_cebian{
+	margin: 20px;
+	float: left;
+	border: 1px solid gainsboro;
+	border-radius: 5px;
 }
 .round_info {
 	float: left;
 	margin-left: 200px;
 	display: inline-block;
-	width: 800px;
+	width: 750px;
 }
 .info_v {
 	margin: 20px;

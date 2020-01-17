@@ -59,22 +59,14 @@ export default {
 	margin: 50px;
 	width: 600px;
 	height: 400px;
-	border: 1px solid black;
+	border: 1px solid gray;
 }
 
 	
 .content1{
 	float: left;
 }
-h3{
-	height: 5px;
-}
-span{
-	height: 5px;
-}
-h5{
-	margin-top: -2px;
-}
+
 
 .more{
 	text-align: center;
@@ -95,7 +87,12 @@ h5{
 	height: 50px;
 	background-color: #FFFFFF;
 }
-
+.time{
+	margin-top: 10px;
+}
+.nierong{
+	margin-top: 10px;
+}
 h1{
 	font-size: 18px;
 }

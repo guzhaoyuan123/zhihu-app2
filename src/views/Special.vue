@@ -2,17 +2,16 @@
     <div class="special">
         <div class="infoBox">
             <div class="info" v-for="(item,index) in dataList" :key="index">
-                <div class="content">
-					<div class="box2">
+                <div class="special_content">
+					<div class="special_box1">
 						 <img :src="item.banner"/>
 					</div>
-					<div class="box3">
+					<div class="special_box2">
 						<h3 class="title">{{item.title}}</h3>
-						<br>
 						<span class="time">{{item.updated}}</span>
-						<h5 class="nierong">
+						<span class="nierong">
 						    {{item.introduction }}
-						</h5>
+						</span>
 					</div>
             
                 </div>
@@ -45,42 +44,37 @@
 
 <style>
     img{
-        width: 600px;
-        height: 250px;
+		margin-top: 20px;
+        width: 300px;
+        height: 140px;
     }
-    .content{
-		border: 1px solid black;
-		height: 300px;
+    .special_content{
+		margin: 20px auto;
+		border-radius: 5px;
+		width: 1000px;
+		border: 1px solid #DCDCDC;
+		height: 180px;
+		background-color: white;
     }
     .find {
         width: 100%;
         height: 100%;
     }
-	.box2{
-		text-align: center;
-		margin-left: 80px;
+	.special_box1{
+		width: 300px;
+		height: 140px;
+		margin-left: 20px;
 		float: left;
 	}
-	.box3{
-		margin-left: 80px;
+	.special_box2{
+		margin-top: 20px;
+		margin-left: 20px;
+		width: 600px;
 		float: left;
 	}
 
-    .picture {
-        width: 550px;
-        height: 150px;
-    }
-    .title {
-        width: 550px;
-    }
-    .time {
-        width: 550px;
-    }
-    .nierong {
-        width: 550px;
-    }
-    .box2 {
-        text-align: center;
-        background-color: aqua;
-    }
+  .nierong{
+	  color: gray;
+  }
+   
 </style>
