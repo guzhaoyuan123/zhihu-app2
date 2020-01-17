@@ -14,7 +14,7 @@
 				<router-link class="router" to="/home/hot">热榜</router-link>
 			</li>
 		</ul>
-		
+
 		
   	</div>
 	<router-view class="container"/>

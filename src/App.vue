@@ -5,6 +5,10 @@
 </template>
 
 <style lang="scss">
+	*{
+		padding: 0;
+		margin: 0;
+	}
 #app {
   @import url('assets/css/basic.css');
   @import url('assets/css/style.css');

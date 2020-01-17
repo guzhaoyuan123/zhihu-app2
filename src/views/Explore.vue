@@ -1,111 +1,109 @@
 <template>
 	<div class="find">
-		<div class="one">
-			<div class="one_1">
-				<img class="picture" src="../assets/image/lianxi1.png" />
-				<h3 class="title">扎克伯格两赴国会受质询，但Facebook「数据门」仍未结束</h3>
-				<span class="time">2019-08-09 14:38:53</span>
-				<h5 class="nierong">
-					我们总是对第一次怀揣期待，从牙牙学语发 出的第一个字节到人生路口迈出的第一步选择， 是第一次，也是值得珍惜的每一次。无数个第
-					一次完成人生阶段的张张拼图，愿你享受每一分，过好这一生。
-				</h5>
+		<div class="infoBox1">
+			<div class="info1" v-for="(item, index) in dataList" :key="index">
+				<div class="content1">
+					<img :src="item.banner" />
+					<div class="zishubox">
+						<h3 class="title">{{ item.title }}</h3>
+						<span class="time">{{ item.updated }}</span>
+						<h5 class="nierong">{{ item.introduction }}</h5>
+					</div>
+				</div>
 			</div>
+		</div>
 
-			<div class="one_2">
-				<img class="picture" src="../assets/image/lianxi1.png" />
-				<h3 class="title">扎克伯格两赴国会受质询，但Facebook「数据门」仍未结束</h3>
-				<span class="time">2019-08-09 14:38:53</span>
-				<h5 class="nierong">
-					我们总是对第一次怀揣期待，从牙牙学语发 出的第一个字节到人生路口迈出的第一步选择， 是第一次，也是值得珍惜的每一次。无数个第
-					一次完成人生阶段的张张拼图，愿你享受每一分，过好这一生。
-				</h5>
-			</div>
-		</div>
-		<div class="two">
-			<div class="two_1">
-				<img class="picture" src="../assets/image/lianxi1.png" />
-				<h3 class="title">扎克伯格两赴国会受质询，但Facebook「数据门」仍未结束</h3>
-				<span class="time">2019-08-09 14:38:53</span>
-				<h5 class="nierong">
-					我们总是对第一次怀揣期待，从牙牙学语发 出的第一个字节到人生路口迈出的第一步选择， 是第一次，也是值得珍惜的每一次。无数个第
-					一次完成人生阶段的张张拼图，愿你享受每一分，过好这一生。
-				</h5>
-			</div>
-		
-			<div class="two_2">
-				<img class="picture" src="../assets/image/lianxi1.png" />
-				<h3 class="title">扎克伯格两赴国会受质询，但Facebook「数据门」仍未结束</h3>
-				<span class="time">2019-08-09 14:38:53</span>
-				<h5 class="nierong">
-					我们总是对第一次怀揣期待，从牙牙学语发 出的第一个字节到人生路口迈出的第一步选择， 是第一次，也是值得珍惜的每一次。无数个第
-					一次完成人生阶段的张张拼图，愿你享受每一分，过好这一生。
-				</h5>
-			</div>
+		<div class="more">
+			<h1><router-link  to="special/all">查看更多</router-link></h1>
 		</div>
 		
-		<div class="box2"><h1><router-link class="router" to="special/all">查看更多</router-link></h1></div>
+		<div class="yuanzoutaolun">
+			<img class="tupanyuan" src="../assets/image/yuanzuo.png" />
+		</div>
+		
+		<div class="more2">
+			<h1><router-link  to="roundtable">查看更多专题</router-link></h1>
+			</div>
 	</div>
 </template>
 
-<script></script>
+<script>
+export default {
+	data() {
+		return {
+			dataList: []
+		};
+	},
+	created() {
+		this.getData();
+	},
+	methods: {
+		getData() {
+			this.axios.get('http://localhost:8888/api/special/').then(res => {
+				this.dataList = res.data.data;
+			});
+		}
+	}
+};
+</script>
 
 <style>
-.find {
-	width: 100%;
-	height: 100%;
+
+
+.infoBox1{
+	box-sizing: border-box;
 }
 
-.one{
-	height: 350px;
-	margin-bottom: 30px;
-}
-.two{
-	height: 350px;
-}
-.one_1 {
-	margin-left: 150px;
-	float: left;
-	width: 550px;
-	height: 350px;
-	overflow: hidden;
-}
-.one_2 {
-	margin-left: 50px;
-	width: 550px;
-	float: left;
-	height: 350px;
-	overflow: hidden;
-}
-.two_1 {
-	margin-left: 150px;
-	float: left;
-	width: 550px;
-	height: 350px;
-	overflow: hidden;
-}
-.two_2 {
-	margin-left: 50px;
-	width: 550px;
-	float: left;
-	height: 350px;
-	overflow: hidden;
-}
-.picture {
-	width: 550px;
-	height: 150px;
-}
-.title {
-	width: 550px;
-}
-.time {
-	width: 550px;
-}
-.nierong {
-	width: 550px;
+.info1{
+	display: inline-block;
+	margin: 50px;
+	width: 600px;
+	height: 400px;
+	border: 1px solid black;
 }
 
-.box2{
+	
+.content1{
+	float: left;
+}
+h3{
+	height: 5px;
+}
+span{
+	height: 5px;
+}
+h5{
+	margin-top: -2px;
+}
+
+.more{
 	text-align: center;
-	background-color: aqua;
+	margin: 0 auto;
+	line-height: 40px;
+	border-radius: 20px;
+	width: 150px;
+	height: 50px;
+	background-color: #FFFFFF;
+}
+
+.more2{
+	text-align: center;
+	margin: 0 auto;
+	line-height: 40px;
+	border-radius: 20px;
+	width: 150px;
+	height: 50px;
+	background-color: #FFFFFF;
+}
+
+h1{
+	font-size: 18px;
+}
+
+.tupanyuan{
+	margin: 0 auto;
+	display: block;
+	width: 1200px;
+	height: 500px;
 }
 </style>
